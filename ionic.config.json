@@ -1,0 +1,7 @@
+{
+  "name": "Israel",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
