@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,15 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
-
-}
+  constructor(private alertController: AlertController) {
+  }
+    async info() {
+      const alert = await this.alertController.create({
+        message: 'Apontar com o escaner num porta-chave, apertar no botão na esquerda do dispositivo para registrar-lo no histórico. ',
+        buttons: ['OK']
+      });
+  
+      await alert.present();
+    }
+    
+  }
